@@ -1,0 +1,38 @@
+<%- include ('partials/header') %>
+<div class="container">
+<form method="post" action="login" onsubmit="return validateLogin()"> 
+	<div id="login" class="row">
+		<div class="col-2 col-12-medium imp-medium">
+		</div>
+		<div class="col-8 col-12-medium imp-medium aln-center aln-middle">
+			<div class="row">
+			<div class="col-6">
+				<h4>RETURNING USER</h4>
+			</div>
+			<div id="signup-link" class="col-6">
+				<span>New to Newton? </span><a href="/signup">Sign Up!</a>
+			</div>
+			</div>
+			<div class="row">
+				<div class="col-6 error-message">
+				<%if(typeof error != "undefined"){%>
+				<%= error %>
+				<%}%>
+				</div>
+			</div>
+			<label for="Email">Email</label>
+			<input type="text" title="Email Address" id="Email" name="Email" data-type="email" required>
+			<span class="Email-error-message error-message" for="Email" style="display: none;"></span>
+			</br>
+			<label for="Password">Password</label>
+			<input type="password" title="Password" id="Password" name="Password" data-type="password" required>
+			<span class="pwd-error-message error-message" for="Password" style="display: none;"></span>
+
+			</br></br>
+			<button type="submit" class="button primary" style="">SIGN IN</button>
+			</br></br>
+		</div>
+		<div class="col-2 col-12-medium imp-medium"></div>
+	</div>
+</form>
+</div>

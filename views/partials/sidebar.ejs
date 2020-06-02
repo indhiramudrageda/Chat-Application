@@ -1,0 +1,29 @@
+<!-- Sidebar -->
+  <nav class="navbar-side">
+    <div class="chatRooms-container-inner">
+      <% chatRooms.forEach(function(chatRoom){ %>
+      <div class="chat-room" onclick="openChat('<%=JSON.stringify(chatRoom)%>');">
+      	   <div style="flex-grow: 1">
+      	       <img src="../images/dp.jpeg" height=58px width=58px />
+      	   </div>
+      	   <div style="flex-grow: 2">
+              <h1><%= chatRoom.participantFName%> <%= chatRoom.participantLName%></h1>
+           </div>
+      </div>
+      <% }); %>
+    </div>
+
+    <div class="contacts-container-inner">
+      <% contacts.forEach(function(contact){ %>
+      <div class="contact" onclick="openChatWithoutRoomID('<%=JSON.stringify(contact)%>');">
+           <div style="flex-grow: 1">
+               <img src="../images/dp.jpeg" height=58px width=58px />
+           </div>
+           <div style="flex-grow: 2">
+              <h1><%= contact.participantFName%> <%= contact.participantLName%></h1>
+           </div>
+      </div>
+      <% }); %>
+    </div>
+
+  </nav>

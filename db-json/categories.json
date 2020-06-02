@@ -1,0 +1,44 @@
+{ 
+    "_id" : ObjectId("5ea736b083d9bcb5c67322b0"), 
+    "category" : "Desktops"
+}
+{ 
+    "_id" : ObjectId("5ead2f088a120bd236bd1bfb"), 
+    "category" : "Monitors"
+}
+{ 
+    "_id" : ObjectId("5ead2f088a120bd236bd1bfe"), 
+    "category" : "Keyboards & Mice"
+}
+{ 
+    "_id" : ObjectId("5ead2f638a120bd236bd1c39"), 
+    "category" : "Laptops"
+}
+{ 
+    "_id" : ObjectId("5ead2f638a120bd236bd1c3c"), 
+    "category" : "headsets and Speakers"
+}
+{ 
+    "_id" : ObjectId("5ead2f638a120bd236bd1c3f"), 
+    "category" : "Printers"
+}
+{ 
+    "_id" : ObjectId("5ead2f638a120bd236bd1c42"), 
+    "category" : "Chargers"
+}
+{ 
+    "_id" : ObjectId("5ead2fc08a120bd236bd1c79"), 
+    "category" : "Hard Drives/SSDs"
+}
+{ 
+    "_id" : ObjectId("5ead2fc08a120bd236bd1c7c"), 
+    "category" : "Flash Drives"
+}
+{ 
+    "_id" : ObjectId("5ead2fc08a120bd236bd1c7f"), 
+    "category" : "CPU/Processors"
+}
+{ 
+    "_id" : ObjectId("5ead2fc08a120bd236bd1c82"), 
+    "category" : "Motherboards"
+}

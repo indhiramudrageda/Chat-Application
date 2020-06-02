@@ -1,0 +1,36 @@
+
+      <!-- Header -->
+      <header class="profile-header">
+        <div class="profile-details">
+            <a href="/" id="logo"><img src="../images/dp.jpeg" height=96% width=30% /></a>
+        </div>
+
+        <div class="profile-actions">
+          <div class="profile-action">
+              <button role="menu" class="menuBtn" onclick="showActionsMenu();">
+                  <i class="fas fa-ellipsis-v menuBtn"></i>
+              </button>
+              <div class="profile-actions-menu">
+                  <ul>
+                      <li><div onclick="showContactDialog();">Add Contact</div></li>
+                      <li><div onclick="showContacts();">Show Contacts</div></li>
+                      <li><div onclick="showUploadDialog();">Change Photo</div></li>
+                      <li><div><a href="/logout">Logout</button></a></div></li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+      </header>
+
+    <div id="myCreateModal" class="modal">
+        <span class="create-close">&times;</span>
+        <div id="create-modal-content"></div>
+    </div>
+    <div id="add-contact">
+          <label for="participantEmail">Enter User Email:</label>
+          <input type="text" name="participantEmail" id="participantEmail" required/>
+          <div id="error-message-add-contact"></div>
+          </br>
+          <button type="submit" id="btnSubmit" class="button primary" onclick="addContact(event);">CREATE</button>
+          </br></br>
+    </div>

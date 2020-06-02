@@ -1,0 +1,75 @@
+<%- include ('partials/header') %>
+<div class="container">
+<form method="post" action="signup" onsubmit="return validateSignup()"> 
+	<div id="signup" class="row">
+		<div class="col-2 col-12-medium imp-medium">
+		</div>
+		<div class="col-8 col-12-medium imp-medium aln-center aln-middle">
+			<div class="row">
+			<div class="col-6">
+				<h4>NEW USER</h4>
+			</div>
+			<div id="login-link" class="col-6">
+				<span>Have an account? </span><a href="/login">Sign In!</a>
+			</div>
+			</div>
+			<div class="row">
+				<div class="col-6 error-message">
+				<%if(typeof error != "undefined"){%>
+				<%= error %>
+				<%}%>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="FirstName">First Name</label>
+					<input type="text" title="First Name" id="FirstName" name="FirstName" data-type="fname" required>
+					<span class="FirstName-error-message error-message" for="FirstName" style="display: none;"></span>
+				</div>
+				<div class="col-6">
+					<label for="LastName">Last Name</label>
+					<input type="text" title="Last Name" id="LastName" name="LastName" data-type="lname" required>
+					<span class="LastName-error-message error-message" for="LastName" style="display: none;"></span>
+				</div>
+			</div>
+			</br>
+			<div class="row">
+				<div class="col-6">
+					<label for="Phone">Phone</label>
+					<input type="text" title="Enter a valid phone number: 9196123101" id="Phone" name="Phone" data-type="phone" pattern="[0-9]{10}" required>
+					<span class="Phone-error-message error-message" for="Phone" style="display: none;"></span>
+				</div>
+				<div class="col-6">
+					<label for="Address">Address</label>
+					<input type="text" title="Address" id="Address" name="Address" data-type="address" required>
+					<span class="Address-error-message error-message" for="Address" style="display: none;"></span>
+				</div>
+			</div>
+			</br>
+			<label for="Email">Email</label>
+			<input type="text" title="Email Address" onfocusout="validateEmail();" id="Email" name="Email" data-type="email" required>
+			<span class="Email-error-message error-message" for="Email" style="display: none;"></span>
+			</br>
+			<label for="Password">Password</label>
+			<input type="password"id="Password" name="Password" data-type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" onfocus="$('#pswd_info').show();" onblur= "$('#pswd_info').hide();" onkeyup="validatePassword();" required>
+			<span class="pwd-error-message error-message" for="Password" style="display: none;"></span>
+			</br>
+			<button type="submit" class="button primary" style="">SIGN UP</button>
+			
+			<div id="pswd_info">
+    			<h4>Password must meet the following requirements:</h4>
+    			<ul>
+        			<li id="lowercase" class="invalid">At least <span class="strong">one lowercase letter</span></li>
+        			<li id="uppercase" class="invalid">At least <span class="strong">one uppercase letter</span></li>
+        			<li id="number" class="invalid">At least <span class="strong">one number</span></li>
+        			<li id="length" class="invalid">Be at least <span class="strong">8 characters</span></li>
+    			</ul>
+			</div>
+			</br></br>
+		</div>
+		<div class="col-2 col-12-medium imp-medium"></div>
+	</div>
+</form>
+</div>
+
+<%- include ('partials/footer') %>
