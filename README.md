@@ -1,1 +1,1 @@
-
+Simple web-based chat application being developed using MEAN stack. Using socket.io library for real time, bidirectional and event-based communication. Features developed so far include: sending plain text messages and receiving them real time, keeping track of unread messages and adding/viewing contacts.
